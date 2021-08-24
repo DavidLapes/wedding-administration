@@ -7,7 +7,6 @@ class CreateGuest extends Component {
     state = {
         first_name: null,
         last_name: null,
-        table_id: null,
         middle_name: null,
         greeting_name: null
     }
@@ -28,10 +27,18 @@ class CreateGuest extends Component {
         return (
             <div className="page-component-container">
                 <div className="form-container middle-align">
-                    <label htmlFor="name">Name</label>
-                    <input className="form-input" type="text" id="name" name="name"
+                    <label htmlFor="first_name">First name</label>
+                    <input className="form-input" type="text" id="first_name" name="first_name"
                            onChange={this.handleChange}/>
-
+                    <label htmlFor="last_name">Last name</label>
+                    <input className="form-input" type="text" id="last_name" name="last_name"
+                           onChange={this.handleChange}/>
+                    <label htmlFor="middle_name">Middle name</label>
+                    <input className="form-input" type="text" id="middle_name" name="middle_name"
+                           onChange={this.handleChange}/>
+                    <label htmlFor="greeting_name">Greeting name</label>
+                    <input className="form-input" type="text" id="greeting_name" name="greeting_name"
+                           onChange={this.handleChange}/>
                     <button className="form-submit-button" onClick={this.handleSubmit}>Create</button>
                 </div>
             </div>

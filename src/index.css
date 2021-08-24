@@ -113,7 +113,7 @@ body {
 .nav-logout-button {
     margin-left: 20px;
     padding: 9px 25px;
-    background-color: rgba(236, 76, 76, 1);
+    background-color: rgba(0, 136, 169, 0.8);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -143,7 +143,7 @@ body {
 }
 
 .nav-logout-button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: rgba(236, 76, 76, 1);
 }
 
 .button:hover {
@@ -172,7 +172,7 @@ body {
 
 .form-submit-button {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #24252A;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -182,7 +182,7 @@ body {
 }
 
 .form-submit-button:hover {
-    background-color: #45a049;
+    background-color: rgba(0, 136, 169, 0.8);
 }
 
 .form-container {

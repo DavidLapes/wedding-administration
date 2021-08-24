@@ -5,6 +5,9 @@ import NavBar from "./components/layout/navigation/NavBar";
 import {connect} from "react-redux";
 import AuthPage from "./components/pages/auth/AuthPage";
 import PrivateRoute from "./components/route/PrivateRoute";
+import GuestList from "./components/pages/guests/GuestList";
+import GuestDetail from "./components/pages/guests/GuestDetail";
+import CreateGuest from "./components/pages/guests/CreateGuest";
 
 class App extends Component {
     render() {
@@ -15,11 +18,8 @@ class App extends Component {
                     <Switch>
                         <PrivateRoute exact path="/" component={Home}/>
                         <PrivateRoute exact path="/create-guest" component={CreateGuest}/>
-                        <PrivateRoute exact path="/create-table" component={CreateTable}/>
                         <PrivateRoute exact path="/guests" component={GuestList}/>
                         <PrivateRoute exact path="/guests/:id" component={GuestDetail}/>
-                        <PrivateRoute exact path="/tables" component={TableList}/>
-                        <PrivateRoute exact path="/tables/:id" component={TableDetail}/>
                         <Redirect from="*" to="/"/>
                     </Switch>
                 </div>

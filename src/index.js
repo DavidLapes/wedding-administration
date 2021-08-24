@@ -15,7 +15,7 @@ axios.interceptors.request.use(function (config) {
     if (storageUser === null) {
         return config;
     }
-    let token = storageUser.authentication_token;
+    let token = storageUser.token;
     if (token === null) {
         return config;
     } else {

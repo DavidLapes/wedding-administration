@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import { push } from "connected-react-router";
+import {deleteGuest} from "../../../services/actions/guests/deleteGuest";
 import {fetchGuests} from "../../../services/actions/guests/fetchGuests";
 import MUIDataTable from "mui-datatables";
 
@@ -82,11 +83,13 @@ class GuestList extends Component {
                         onRowClick: (rowData) => {
                             this.props.dispatch(push("/guests/" + rowData[0]))
                         },
-                        onRowsDelete: (e) => {
-                            //TODO
-                            console.log(e);
-                            e.data.forEach(item => {
-                                console.log(item)
+                        onRowsDelete: (rows) => {
+                            let lookup = rows.lookup;
+                            let deletedData = Object.keys(lookup);
+                            let dataIndexes = deletedData.map(x => parseInt(x));
+                            dataIndexes.forEach(index => {
+                                let guest = this.state.guests[index];
+                                this.props.dispatch(deleteGuest(guest.id))
                             })
                         }
                     }}

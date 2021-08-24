@@ -247,7 +247,7 @@ body {
     border-bottom-color: rgba(255,255,0, 0.8);
     margin-bottom: 50px;
 }
-/*TODO: Color variables*/
+
 .entity-detail-table-tab {
     display: flex;
     width: 200px;

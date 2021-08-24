@@ -10,3 +10,4 @@ export const PRIVATE_URL = API_URL + "/private"
 export const AUTH_URL = PUBLIC_URL + "/auth";
 export const LOGIN_URL = AUTH_URL + "/sign-in";
 export const GUEST_URL = PRIVATE_URL + "/guests";
+export const TABLE_URL = PRIVATE_URL + "/tables";

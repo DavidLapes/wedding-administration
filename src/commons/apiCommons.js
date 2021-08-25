@@ -3,7 +3,7 @@ export const BACKEND_URL
     || window.location.hostname === "127.0.01"
     || window.location.hostname === ""
     ? "http://localhost:5000"
-    : "api.terkaberedavida.cz";
+    : "https://api.terkaberedavida.cz";
 export const API_URL = BACKEND_URL + "/api";
 export const PUBLIC_URL = API_URL + "/public"
 export const PRIVATE_URL = API_URL + "/private"

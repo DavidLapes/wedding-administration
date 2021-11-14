@@ -18,6 +18,9 @@ class NavBar extends Component {
                 <nav>
                     <ul className="nav-links">
                         <li>
+                            <Link to="/">Audit</Link>
+                        </li>
+                        <li>
                             <Link to="/guests">Hosti</Link>
                             <ul className="nav-link-dropdown">
                                 <li>

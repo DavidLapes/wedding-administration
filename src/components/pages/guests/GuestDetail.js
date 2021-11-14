@@ -15,9 +15,9 @@ class GuestDetail extends Component {
         state: null,
         city: null,
         street: null,
-        orientation_number: null,
-        descriptive_number: null,
         postal_code: null,
+        note: null,
+        language: null,
         accommodation: null,
         rsvp_answered: null,
         email_sent: null,
@@ -45,7 +45,144 @@ class GuestDetail extends Component {
         //TODO
         return (
             <div className="page-component-container">
-                Guest detail
+                <div className="detail-container">
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>ID</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.id}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Jméno</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.first_name}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Druhé jméno</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.middle_name}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Příjmení</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.last_name}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Oslovení</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.greeting_name}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Ulice</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.street}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Město</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.city}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>PSČ</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.postal_code}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Země</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.state}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>E-mail</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.email}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Telefon</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.phone}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>RSVP</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.rsvp_answered ? "Ano" : "Ne"}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Ubytování</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.accommodation ? "Ano" : "Ne"}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>E-mail zaslán</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.email_sent ? "Ano" : "Ne"}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Poznámka</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.note}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>ID stolu</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.table_id}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Jazyk</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.language}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -32,7 +32,7 @@ class GuestList extends Component {
         return (
             <div className="page-component-container">
                 <MUIDataTable
-                    title={"Guests"}
+                    title={"Hosti"}
                     data={this.state.guests}
                     columns={[
                         {
@@ -45,7 +45,7 @@ class GuestList extends Component {
                         },
                         {
                             name: "first_name",
-                            label: "First name",
+                            label: "Jméno",
                             options: {
                                 filter: false,
                                 sort: false
@@ -53,7 +53,7 @@ class GuestList extends Component {
                         },
                         {
                             name: "last_name",
-                            label: "Last name",
+                            label: "Příjmení",
                             options: {
                                 filter: false,
                                 sort: false

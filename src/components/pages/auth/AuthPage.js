@@ -67,7 +67,7 @@ export default function AuthPage() {
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        SIGN IN
+                        PŘIHLÁŠENÍ
                     </Typography>
                     <form className={classes.form} noValidate onSubmit={(event) => {
                         event.preventDefault();
@@ -84,7 +84,7 @@ export default function AuthPage() {
                             required
                             fullWidth
                             id="email"
-                            label="Email Address"
+                            label="E-mailová adresa"
                             name="email"
                             autoComplete="email"
                             autoFocus
@@ -100,7 +100,7 @@ export default function AuthPage() {
                             required
                             fullWidth
                             name="password"
-                            label="Password"
+                            label="Heslo"
                             type="password"
                             id="password"
                             autoComplete="current-password"
@@ -112,7 +112,7 @@ export default function AuthPage() {
                             color="primary"
                             className={classes.submit}
                         >
-                            Sign In
+                            Přihlásit se
                         </Button>
                     </form>
                 </div>

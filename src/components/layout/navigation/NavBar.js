@@ -18,29 +18,29 @@ class NavBar extends Component {
                 <nav>
                     <ul className="nav-links">
                         <li>
-                            <Link to="/guests">Guests</Link>
+                            <Link to="/guests">Hosti</Link>
                             <ul className="nav-link-dropdown">
                                 <li>
-                                    <Link to="/create-guest">Add Guest</Link>
+                                    <Link to="/create-guest">Přidat hosta</Link>
                                 </li>
                                 <li>
-                                    <Link to="/guests">Show Guests</Link>
+                                    <Link to="/guests">Zobrazit hosty</Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <Link to="/tables">Tables</Link>
+                            <Link to="/tables">Stoly</Link>
                             <ul className="nav-link-dropdown">
                                 <li>
-                                    <Link to="/create-table">Add Table</Link>
+                                    <Link to="/create-table">Přidat stůl</Link>
                                 </li>
                                 <li>
-                                    <Link to="/tables">Show Tables</Link>
+                                    <Link to="/tables">Zobrazit stoly</Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <button className="nav-logout-button" onClick={this.handleLogout}>Log Out</button>
+                            <button className="nav-logout-button" onClick={this.handleLogout}>Odhlásit se</button>
                         </li>
                     </ul>
                 </nav>

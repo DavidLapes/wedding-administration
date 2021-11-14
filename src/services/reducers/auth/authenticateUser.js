@@ -1,6 +1,6 @@
 import {isAuthenticated} from "../../auth/auth";
 import {auth} from "../../actions/index";
-import {showErrorPopup, showSuccessPopup} from "../../popups/popup";
+import {showErrorPopup} from "../../popups/popup";
 
 const initialAuthenticationState = {
     isAuthenticated: isAuthenticated(),
@@ -18,7 +18,6 @@ export function authenticationReducer(state = initialAuthenticationState, action
                 isReady: false
             }
         case auth.LOGIN_USER_SUCCESS:
-            showSuccessPopup()
             return {
                 ...state,
                 isReady: true,

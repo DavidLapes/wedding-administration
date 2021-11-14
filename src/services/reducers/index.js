@@ -3,6 +3,8 @@ import { connectRouter } from 'connected-react-router'
 
 import {authenticationReducer} from "./auth/authenticateUser";
 
+import {fetchAuditsReducer} from "./audits/fetchAudits";
+
 import {createGuestReducer} from "./guests/createGuest";
 import {fetchGuestDetailReducer} from "./guests/fetchGuestDetail";
 import {fetchGuestsReducer} from "./guests/fetchGuests";
@@ -15,6 +17,8 @@ import {deleteTableReducer} from "./tables/deleteTable";
 
 const reducers = (history) => combineReducers({
     auth: authenticationReducer,
+
+    fetchAudits: fetchAuditsReducer,
 
     createGuest: createGuestReducer,
     fetchGuestsDetails: fetchGuestDetailReducer,

@@ -1,5 +1,7 @@
 import * as auth from "./auth/authenticateUser";
 
+import * as fetchAudits from "./audit/fetchAudits";
+
 import * as createGuest from "./guests/createGuest";
 import * as fetchGuestDetail from "./guests/fetchGuestDetail";
 import * as fetchGuests from "./guests/fetchGuests";
@@ -12,6 +14,7 @@ import * as deleteTable from "./tables/deleteTable";
 
 export {
     auth,
+    fetchAudits,
     createGuest, fetchGuestDetail, fetchGuests, deleteGuest,
     createTable, fetchTableDetail, fetchTables, deleteTable
 }

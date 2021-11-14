@@ -67,9 +67,9 @@ class GuestList extends Component {
                                 sort: false,
                                 customBodyRender: value => {
                                     if(value === true) {
-                                        return <span>Yes</span>
+                                        return <span>Ano</span>
                                     } else {
-                                        return <span>No</span>
+                                        return <span>Ne</span>
                                     }
                                 }
                             }

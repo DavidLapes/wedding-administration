@@ -8,6 +8,7 @@ import {fetchAuditsReducer} from "./audits/fetchAudits";
 import {createGuestReducer} from "./guests/createGuest";
 import {fetchGuestDetailReducer} from "./guests/fetchGuestDetail";
 import {fetchGuestsReducer} from "./guests/fetchGuests";
+import {editGuestReducer} from "./guests/editGuest";
 import {deleteGuestReducer} from "./guests/deleteGuest";
 
 import {createTableReducer} from "./tables/createTable";
@@ -23,6 +24,7 @@ const reducers = (history) => combineReducers({
     createGuest: createGuestReducer,
     fetchGuestsDetails: fetchGuestDetailReducer,
     fetchGuests: fetchGuestsReducer,
+    editGuest: editGuestReducer,
     deleteGuest: deleteGuestReducer,
 
     createTable: createTableReducer,

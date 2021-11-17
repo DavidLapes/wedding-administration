@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import {fetchAudits} from "../../../services/actions/audit/fetchAudits";
 import {connect} from "react-redux";
+import { push } from "connected-react-router";
+import {fetchAudits} from "../../../services/actions/audit/fetchAudits";
 import MUIDataTable from "mui-datatables";
 
 class Home extends Component {
@@ -36,6 +37,14 @@ class Home extends Component {
                         {
                             name: "id",
                             label: "ID",
+                            options: {
+                                filter: false,
+                                sort: false
+                            }
+                        },
+                        {
+                            name: "guest_id",
+                            label: "ID hosta",
                             options: {
                                 filter: false,
                                 sort: false
@@ -99,14 +108,15 @@ class Home extends Component {
                     ]}
                     options={{
                         filterType: "checkbox",
-                        filter: false,
                         print: false,
                         download: false,
                         search: false,
-                        rowSelected: false,
-                        rowsSelected: false,
-                        selectableRows: false,
-                        viewColumns: false
+                        selectableRows: "none",
+                        viewColumns: false,
+                        onRowClick: (rowData) => {
+                            console.log(rowData)
+                            this.props.dispatch(push("/guests/" + rowData[1]))
+                        }
                     }}
                 />
             </div>

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {fetchGuestDetail} from "../../../services/actions/guests/fetchGuestDetail";
+import {push} from "connected-react-router";
 
 class GuestDetail extends Component {
 
@@ -42,7 +43,6 @@ class GuestDetail extends Component {
     }
 
     render() {
-        //TODO
         return (
             <div className="page-component-container">
                 <div className="detail-container">
@@ -181,6 +181,14 @@ class GuestDetail extends Component {
                         <div className="detail-row-value">
                             <span>{this.state.language}</span>
                         </div>
+                    </div>
+                    <div className="detail-row">
+                        <button
+                            className="form-submit-button"
+                            onClick={() => this.props.dispatch(push("/guests/" + this.state.id + "/edit"))}
+                        >
+                            Editovat
+                        </button>
                     </div>
                 </div>
             </div>

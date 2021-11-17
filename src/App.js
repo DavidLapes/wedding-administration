@@ -11,6 +11,7 @@ import CreateGuest from "./components/pages/guests/CreateGuest";
 import TableDetail from "./components/pages/tables/TableDetail";
 import TableList from "./components/pages/tables/TableList";
 import CreateTable from "./components/pages/tables/CreateTable";
+import EditGuest from "./components/pages/guests/EditGuest";
 
 class App extends Component {
     render() {
@@ -23,6 +24,7 @@ class App extends Component {
                         <PrivateRoute exact path="/create-guest" component={CreateGuest}/>
                         <PrivateRoute exact path="/guests" component={GuestList}/>
                         <PrivateRoute exact path="/guests/:id" component={GuestDetail}/>
+                        <PrivateRoute exact path="/guests/:id/edit" component={EditGuest}/>
                         <PrivateRoute exact path="/create-table" component={CreateTable}/>
                         <PrivateRoute exact path="/tables" component={TableList}/>
                         <PrivateRoute exact path="/tables/:id" component={TableDetail}/>

@@ -24,8 +24,6 @@ axios.interceptors.request.use(function (config) {
     }
 });
 
-//TODO: Add props validation to all components
-
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>

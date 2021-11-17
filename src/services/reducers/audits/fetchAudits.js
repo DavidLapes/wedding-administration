@@ -21,6 +21,7 @@ export function fetchAuditsReducer(state = initialAuditState, action) {
                 dataReduced: action.data.map(auditLog => {
                     return {
                         id: auditLog.id,
+                        guest_id: auditLog.payload.record.id,
                         event :auditLog.event,
                         time_created: auditLog.time_created,
                         first_name: auditLog.payload.record.first_name,

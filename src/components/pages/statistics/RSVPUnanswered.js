@@ -1,28 +1,29 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import { push } from "connected-react-router";
-import {fetchAudits} from "../../../services/actions/audit/fetchAudits";
+import {fetchStatisticsRSVPUnanswered} from "../../../services/actions/statistics/fetchStatisticsRSVPUnanswered";
+import {push} from "connected-react-router";
 import MUIDataTable from "mui-datatables";
+import StatisticsMenu from "./StatisticsMenu";
 
-class Home extends Component {
+class RSVPUnanswered extends Component {
 
     state = {
-        audits: []
+        guests: []
     }
 
     componentDidMount() {
-        this.props.dispatch(fetchAudits());
-        if(this.props.audits) {
+        this.props.dispatch(fetchStatisticsRSVPUnanswered());
+        if(this.props.guests) {
             this.setState({
-                audits: this.props.audits
+                guests: this.props.guests
             })
         }
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if(prevProps.audits !== this.props.audits) {
+        if(prevProps.guests !== this.props.guests) {
             this.setState({
-                audits: this.props.audits
+                guests: this.props.guests
             })
         }
     }
@@ -30,21 +31,14 @@ class Home extends Component {
     render() {
         return (
             <div className="page-component-container">
+                <StatisticsMenu/>
                 <MUIDataTable
-                    title={"Audit"}
-                    data={this.state.audits}
+                    title={"RSVP nevyplnili tihle hosté"}
+                    data={this.state.guests}
                     columns={[
                         {
                             name: "id",
                             label: "ID",
-                            options: {
-                                filter: false,
-                                sort: false
-                            }
-                        },
-                        {
-                            name: "guest_id",
-                            label: "ID hosta",
                             options: {
                                 filter: false,
                                 sort: false
@@ -67,16 +61,8 @@ class Home extends Component {
                             }
                         },
                         {
-                            name: "email",
-                            label: "E-mail",
-                            options: {
-                                filter: false,
-                                sort: false
-                            }
-                        },
-                        {
-                            name: "accommodation",
-                            label: "Ubytování",
+                            name: "rsvp_answered",
+                            label: "RSVP",
                             options: {
                                 filter: false,
                                 sort: false,
@@ -88,22 +74,6 @@ class Home extends Component {
                                     }
                                 }
                             }
-                        },
-                        {
-                            name: "event",
-                            label: "Akce",
-                            options: {
-                                filter: false,
-                                sort: false
-                            }
-                        },
-                        {
-                            name: "time_created",
-                            label: "Datum vytvoření",
-                            options: {
-                                filter: false,
-                                sort: false
-                            }
                         }
                     ]}
                     options={{
@@ -114,8 +84,7 @@ class Home extends Component {
                         selectableRows: "none",
                         viewColumns: false,
                         onRowClick: (rowData) => {
-                            console.log(rowData)
-                            this.props.dispatch(push("/guests/" + rowData[1]))
+                            this.props.dispatch(push("/guests/" + rowData[0]))
                         }
                     }}
                 />
@@ -126,8 +95,8 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        audits: state.fetchAudits.dataReduced
+        guests: state.fetchStatisticsRSVPUnanswered.data
     }
 }
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(RSVPUnanswered);

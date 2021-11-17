@@ -13,9 +13,17 @@ import * as fetchTableDetail from "./tables/fetchTableDetail";
 import * as fetchTables from "./tables/fetchTables";
 import * as deleteTable from "./tables/deleteTable";
 
+import * as fetchStatistics from "./statistics/fetchStatistics";
+import * as fetchStatisticsRSVPAnswered from "./statistics/fetchStatisticsRSVPAnswered";
+import * as fetchStatisticsRSVPUnanswered from "./statistics/fetchStatisticsRSVPUnanswered";
+import * as fetchStatisticsAccommodationAccepted from "./statistics/fetchStatisticsAccommodationAccepted";
+import * as fetchStatisticsAccommodationDeclined from "./statistics/fetchStatisticsAccommodationDeclined";
+
 export {
     auth,
     fetchAudits,
     createGuest, fetchGuestDetail, fetchGuests, editGuest, deleteGuest,
-    createTable, fetchTableDetail, fetchTables, deleteTable
+    createTable, fetchTableDetail, fetchTables, deleteTable,
+    fetchStatistics, fetchStatisticsRSVPAnswered, fetchStatisticsRSVPUnanswered,
+    fetchStatisticsAccommodationAccepted, fetchStatisticsAccommodationDeclined
 }

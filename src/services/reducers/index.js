@@ -16,6 +16,12 @@ import {fetchTableDetailReducer} from "./tables/fetchTableDetail";
 import {fetchTablesReducer} from "./tables/fetchTables";
 import {deleteTableReducer} from "./tables/deleteTable";
 
+import {fetchStatisticsReducer} from "./statistics/fetchStatistics";
+import {fetchStatisticsRSVPAnsweredReducer} from "./statistics/fetchStatisticsRSVPAnswered";
+import {fetchStatisticsRSVPUnansweredReducer} from "./statistics/fetchStatisticsRSVPUnanswered";
+import {fetchStatisticsAccommodationAcceptedReducer} from "./statistics/fetchStatisticsAccommodationAccepted";
+import {fetchStatisticsAccommodationDeclinedReducer} from "./statistics/fetchStatisticsAccommodationDeclined";
+
 const reducers = (history) => combineReducers({
     auth: authenticationReducer,
 
@@ -31,6 +37,12 @@ const reducers = (history) => combineReducers({
     fetchTablesDetails: fetchTableDetailReducer,
     fetchTables: fetchTablesReducer,
     deleteTable: deleteTableReducer,
+
+    fetchStatistics: fetchStatisticsReducer,
+    fetchStatisticsRSVPAnswered: fetchStatisticsRSVPAnsweredReducer,
+    fetchStatisticsRSVPUnanswered: fetchStatisticsRSVPUnansweredReducer,
+    fetchStatisticsAccommodationAccepted: fetchStatisticsAccommodationAcceptedReducer,
+    fetchStatisticsAccommodationDeclined: fetchStatisticsAccommodationDeclinedReducer,
 
     router: connectRouter(history)
 })

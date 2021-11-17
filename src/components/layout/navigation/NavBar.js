@@ -18,6 +18,23 @@ class NavBar extends Component {
                 <nav>
                     <ul className="nav-links">
                         <li>
+                            <Link to="/statistics">Statistiky</Link>
+                            <ul className="nav-link-dropdown">
+                                <li>
+                                    <Link to="/statistics/rsvp-answered">RSVP vyplnilo</Link>
+                                </li>
+                                <li>
+                                    <Link to="/statistics/rsvp-unanswered">RSVP nevyplnilo</Link>
+                                </li>
+                                <li>
+                                    <Link to="/statistics/accommodation-accepted">Ubytování chce</Link>
+                                </li>
+                                <li>
+                                    <Link to="/statistics/accommodation-declined">Ubytování nechce</Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <Link to="/">Audit</Link>
                         </li>
                         <li>

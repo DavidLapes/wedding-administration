@@ -28,14 +28,6 @@ class AccommodationDeclined extends Component {
         }
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if(prevProps.guests !== this.props.guests) {
-            this.setState({
-                guests: this.props.guests
-            })
-        }
-    }
-
     render() {
         return (
             <div className="page-component-container">

@@ -23,7 +23,9 @@ class EditGuest extends Component {
         note: null,
         language: null,
         accommodation: null,
-        table_id: null
+        table_id: null,
+        is_beer_drinker: null,
+        is_wine_drinker: null
     }
 
     componentDidMount() {
@@ -55,6 +57,18 @@ class EditGuest extends Component {
         })
     };
 
+    handleBeer = (e) => {
+        this.setState({
+            is_beer_drinker: e.value
+        })
+    };
+
+    handleWine = (e) => {
+        this.setState({
+            is_wine_drinker: e.value
+        })
+    };
+
     handleLanguage = (e) => {
         this.setState({
             language: e.value
@@ -78,7 +92,9 @@ class EditGuest extends Component {
                 note: this.state.note,
                 language: this.state.language,
                 accommodation: this.state.accommodation,
-                table_id: this.state.table_id
+                table_id: this.state.table_id,
+                is_beer_drinker: this.state.is_beer_drinker,
+                is_wine_drinker: this.state.is_wine_drinker
             })
         ));
     };
@@ -90,6 +106,32 @@ class EditGuest extends Component {
     render() {
 
         const accommodationOptions = [
+            {
+                id: 1,
+                value: true,
+                label: "Ano"
+            },
+            {
+                id: 2,
+                value: false,
+                label: "Ne"
+            }
+        ];
+
+        const beerOptions = [
+            {
+                id: 1,
+                value: true,
+                label: "Ano"
+            },
+            {
+                id: 2,
+                value: false,
+                label: "Ne"
+            }
+        ];
+
+        const wineOptions = [
             {
                 id: 1,
                 value: true,
@@ -182,9 +224,23 @@ class EditGuest extends Component {
                            onChange={this.handleChange}
                            value={this.state.note}
                     />
+                    <Select className="form-input"
+                            id="is_beer_drinker"
+                            placeholder="Pije pivo?"
+                            options={beerOptions}
+                            onChange={this.handleBeer}
+                            value={beerOptions.find(item => item.value === this.state.is_beer_drinker)}
+                    />
+                    <Select className="form-input"
+                            id="is_wine_drinker"
+                            placeholder="Pije víno?"
+                            options={wineOptions}
+                            onChange={this.handleWine}
+                            value={wineOptions.find(item => item.value === this.state.is_wine_drinker)}
+                    />
                     <label htmlFor="greeting_name">Jazyk</label>
                     <Select className="form-input"
-                            id="accommodation"
+                            id="language"
                             placeholder="Jazyk e-mailů"
                             options={languageOptions}
                             onChange={this.handleLanguage}

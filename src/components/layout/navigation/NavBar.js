@@ -32,6 +32,12 @@ class NavBar extends Component {
                                 <li>
                                     <Link to="/statistics/accommodation-declined">Ubytování nechce</Link>
                                 </li>
+                                <li>
+                                    <Link to="/statistics/beer-drinkers">Pivaři</Link>
+                                </li>
+                                <li>
+                                    <Link to="/statistics/wine-drinkers">Vinaři</Link>
+                                </li>
                             </ul>
                         </li>
                         <li>

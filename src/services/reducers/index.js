@@ -21,6 +21,8 @@ import {fetchStatisticsRSVPAnsweredReducer} from "./statistics/fetchStatisticsRS
 import {fetchStatisticsRSVPUnansweredReducer} from "./statistics/fetchStatisticsRSVPUnanswered";
 import {fetchStatisticsAccommodationAcceptedReducer} from "./statistics/fetchStatisticsAccommodationAccepted";
 import {fetchStatisticsAccommodationDeclinedReducer} from "./statistics/fetchStatisticsAccommodationDeclined";
+import {fetchStatisticsBeerDrinkersReducer} from "./statistics/fetchStatisticsBeerDrinkers";
+import {fetchStatisticsWineDrinkersReducer} from "./statistics/fetchStatisticsWineDrinkers";
 
 const reducers = (history) => combineReducers({
     auth: authenticationReducer,
@@ -43,6 +45,8 @@ const reducers = (history) => combineReducers({
     fetchStatisticsRSVPUnanswered: fetchStatisticsRSVPUnansweredReducer,
     fetchStatisticsAccommodationAccepted: fetchStatisticsAccommodationAcceptedReducer,
     fetchStatisticsAccommodationDeclined: fetchStatisticsAccommodationDeclinedReducer,
+    fetchStatisticsBeerDrinkers: fetchStatisticsBeerDrinkersReducer,
+    fetchStatisticsWineDrinkers: fetchStatisticsWineDrinkersReducer,
 
     router: connectRouter(history)
 })

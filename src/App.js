@@ -17,6 +17,8 @@ import RSVPAnswered from "./components/pages/statistics/RSVPAnswered";
 import RSVPUnanswered from "./components/pages/statistics/RSVPUnanswered";
 import AccommodationAccepted from "./components/pages/statistics/AccommodationAccepted";
 import AccommodationDeclined from "./components/pages/statistics/AccommodationDeclined";
+import BeerDrinkers from "./components/pages/statistics/BeerDrinkers";
+import WineDrinkers from "./components/pages/statistics/WineDrinkers";
 
 class App extends Component {
     render() {
@@ -38,6 +40,8 @@ class App extends Component {
                         <PrivateRoute exact path="/statistics/rsvp-unanswered" component={RSVPUnanswered}/>
                         <PrivateRoute exact path="/statistics/accommodation-accepted" component={AccommodationAccepted}/>
                         <PrivateRoute exact path="/statistics/accommodation-declined" component={AccommodationDeclined}/>
+                        <PrivateRoute exact path="/statistics/beer-drinkers" component={BeerDrinkers}/>
+                        <PrivateRoute exact path="/statistics/wine-drinkers" component={WineDrinkers}/>
                         <Redirect from="*" to="/"/>
                     </Switch>
                 </div>

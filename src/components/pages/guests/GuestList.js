@@ -73,6 +73,44 @@ class GuestList extends Component {
                                     }
                                 }
                             }
+                        },
+                        {
+                            name: "is_beer_drinker",
+                            label: "Pivař",
+                            options: {
+                                filter: false,
+                                sort: false,
+                                customBodyRender: value => {
+                                    if(value !== null) {
+                                        if(value === true) {
+                                            return <span>Ano</span>
+                                        } else {
+                                            return <span>Ne</span>
+                                        }
+                                    } else {
+                                        return <span></span>
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            name: "is_wine_drinker",
+                            label: "Vinař",
+                            options: {
+                                filter: false,
+                                sort: false,
+                                customBodyRender: value => {
+                                    if(value !== null) {
+                                        if(value === true) {
+                                            return <span>Ano</span>
+                                        } else {
+                                            return <span>Ne</span>
+                                        }
+                                    } else {
+                                        return <span></span>
+                                    }
+                                }
+                            }
                         }
                     ]}
                     options={{

@@ -22,7 +22,9 @@ class GuestDetail extends Component {
         accommodation: null,
         rsvp_answered: null,
         email_sent: null,
-        table_id: null
+        table_id: null,
+        is_beer_drinker: null,
+        is_wine_drinker: null
     }
 
     componentDidMount() {
@@ -148,6 +150,26 @@ class GuestDetail extends Component {
                         </div>
                         <div className="detail-row-value">
                             <span>{this.state.accommodation ? "Ano" : "Ne"}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Pivař</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.is_beer_drinker !== null
+                                ? this.state.is_beer_drinker ? "Ano" : "Ne"
+                                : ""}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Vinař</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.is_wine_drinker !== null
+                                ? this.state.is_wine_drinker ? "Ano" : "Ne"
+                                : ""}</span>
                         </div>
                     </div>
                     <div className="detail-row">

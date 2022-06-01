@@ -18,6 +18,8 @@ import * as fetchStatisticsRSVPAnswered from "./statistics/fetchStatisticsRSVPAn
 import * as fetchStatisticsRSVPUnanswered from "./statistics/fetchStatisticsRSVPUnanswered";
 import * as fetchStatisticsAccommodationAccepted from "./statistics/fetchStatisticsAccommodationAccepted";
 import * as fetchStatisticsAccommodationDeclined from "./statistics/fetchStatisticsAccommodationDeclined";
+import * as fetchStatisticsBeerDrinkers from "./statistics/fetchStatisticsBeerDrinkers";
+import * as fetchStatisticsWineDrinkers from "./statistics/fetchStatisticsWineDrinkers";
 
 export {
     auth,
@@ -25,5 +27,6 @@ export {
     createGuest, fetchGuestDetail, fetchGuests, editGuest, deleteGuest,
     createTable, fetchTableDetail, fetchTables, deleteTable,
     fetchStatistics, fetchStatisticsRSVPAnswered, fetchStatisticsRSVPUnanswered,
-    fetchStatisticsAccommodationAccepted, fetchStatisticsAccommodationDeclined
+    fetchStatisticsAccommodationAccepted, fetchStatisticsAccommodationDeclined,
+    fetchStatisticsBeerDrinkers, fetchStatisticsWineDrinkers
 }

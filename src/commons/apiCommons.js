@@ -17,3 +17,5 @@ export const STATISTICS_RSVP_ANSWERED_URL = STATISTICS_URL + "/rsvpanswered";
 export const STATISTICS_RSVP_UNANSWERED_URL = STATISTICS_URL + "/rsvpunanswered";
 export const STATISTICS_ACCOMMODATION_ACCEPTED_URL = STATISTICS_URL + "/accommodationaccepted";
 export const STATISTICS_ACCOMMODATION_DECLINED_URL = STATISTICS_URL + "/accommodationdeclined";
+export const STATISTICS_BEER_DRINKERS_URL = STATISTICS_URL + "/beerdrinkers";
+export const STATISTICS_WINE_DRINKERS_URL = STATISTICS_URL + "/winedrinkers";

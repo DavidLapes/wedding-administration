@@ -10,7 +10,9 @@ class Statistics extends Component {
             rsvp_answered_count:          0,
             rsvp_unanswered_count:        0,
             accommodation_accepted_count: 0,
-            accommodation_declined_count: 0
+            accommodation_declined_count: 0,
+            beer_drinkers_count:          0,
+            wine_drinkers_count:          0
         }
     }
 
@@ -52,6 +54,16 @@ class Statistics extends Component {
                     <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/accommodation-declined"))}>
                         <span className="grid-column-label">Ubytování nechce</span>
                         <span className="grid-column-value">{this.state.statistics.accommodation_declined_count}</span>
+                    </div>
+                </div>
+                <div className="grid-container">
+                    <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/beer-drinkers"))}>
+                        <span className="grid-column-label">Pivaři</span>
+                        <span className="grid-column-value">{this.state.statistics.beer_drinkers_count}</span>
+                    </div>
+                    <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/wine-drinkers"))}>
+                        <span className="grid-column-label">Vinaři</span>
+                        <span className="grid-column-value">{this.state.statistics.wine_drinkers_count}</span>
                     </div>
                 </div>
             </div>

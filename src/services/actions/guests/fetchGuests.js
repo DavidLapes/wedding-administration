@@ -9,7 +9,7 @@ export const FETCH_GUEST_ERROR = "FETCH_GUEST_ERROR";
 export const fetchGuests = () => (dispatch, getState) => {
     if (canFetchGuests(getState())) {
         dispatch(fetchGuestsRequest());
-        return axios.get(GUEST_URL)
+        return axios.get(GUEST_URL + "?order_column=id&order_direction=asc")
             .then(json => dispatch(fetchGuestsSuccess(json.data.data)))
             .catch(err => dispatch(fetchGuestsError(getExceptionResponseMessage(err))))
     }

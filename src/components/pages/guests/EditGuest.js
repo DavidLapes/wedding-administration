@@ -124,12 +124,6 @@ class EditGuest extends Component {
         })
     }
 
-    handleStatus = (e) => {
-        this.setState({
-            status: e.value
-        })
-    }
-
     handleSubmit = () => {
         this.props.dispatch(editGuest(
             this.state.id,
@@ -227,19 +221,6 @@ class EditGuest extends Component {
                 id: 2,
                 value: "MAIL",
                 label: "Pošta"
-            }
-        ];
-
-        const statusOptions = [
-            {
-                id: 1,
-                value: "ACCEPTED",
-                label: "Přijatý"
-            },
-            {
-                id: 2,
-                value: "REJECTED",
-                label: "Odmítnutý"
             }
         ];
 

@@ -148,6 +148,7 @@ class EditGuest extends Component {
                 language: this.state.language,
                 accommodation: this.state.accommodation,
                 table_id: this.state.table_id,
+                is_meat_eater: this.state.is_meat_eater,
                 is_beer_drinker: this.state.is_beer_drinker,
                 is_wine_drinker: this.state.is_wine_drinker,
                 type: this.state.type,

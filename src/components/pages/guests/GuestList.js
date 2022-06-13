@@ -113,6 +113,25 @@ class GuestList extends Component {
                             }
                         },
                         {
+                            name: "is_meat_eater",
+                            label: "Maso",
+                            options: {
+                                filter: false,
+                                sort: false,
+                                customBodyRender: value => {
+                                    if(value !== null) {
+                                        if(value === true) {
+                                            return <span>Ano</span>
+                                        } else {
+                                            return <span>Ne</span>
+                                        }
+                                    } else {
+                                        return <span></span>
+                                    }
+                                }
+                            }
+                        },
+                        {
                             name: "is_invitation_sent",
                             label: "Pozvánka poslána",
                             options: {

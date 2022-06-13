@@ -22,9 +22,17 @@ class GuestDetail extends Component {
         accommodation: null,
         rsvp_answered: null,
         email_sent: null,
+        is_invitation_sent: null,
+        invitation_delivery_type: null,
+        invitation_delivery_type_name: null,
         table_id: null,
+        is_meat_eater: null,
         is_beer_drinker: null,
-        is_wine_drinker: null
+        is_wine_drinker: null,
+        escort_id: null,
+        escort_name: null,
+        type: null,
+        type_name: null
     }
 
     componentDidMount() {
@@ -138,6 +146,25 @@ class GuestDetail extends Component {
                     </div>
                     <div className="detail-row">
                         <div className="detail-row-title">
+                            <span>Typ hosta</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.type_name}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Eskort</span>
+                        </div>
+                        <div className="detail-row-value" onClick={() => {
+                            this.props.dispatch(fetchGuestDetail(this.state.escort_id));
+                            this.props.dispatch(push("/guests/" + this.state.escort_id));
+                        }}>
+                            <span>{this.state.escort_name}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
                             <span>RSVP</span>
                         </div>
                         <div className="detail-row-value">
@@ -150,6 +177,16 @@ class GuestDetail extends Component {
                         </div>
                         <div className="detail-row-value">
                             <span>{this.state.accommodation ? "Ano" : "Ne"}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Jí maso</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.is_meat_eater !== null
+                                ? this.state.is_meat_eater ? "Ano" : "Ne"
+                                : ""}</span>
                         </div>
                     </div>
                     <div className="detail-row">
@@ -178,6 +215,22 @@ class GuestDetail extends Component {
                         </div>
                         <div className="detail-row-value">
                             <span>{this.state.email_sent ? "Ano" : "Ne"}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Pozvánka poslána</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.is_invitation_sent ? "Ano" : "Ne"}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
+                            <span>Způsob doručení</span>
+                        </div>
+                        <div className="detail-row-value">
+                            <span>{this.state.invitation_delivery_type_name}</span>
                         </div>
                     </div>
                     <div className="detail-row">

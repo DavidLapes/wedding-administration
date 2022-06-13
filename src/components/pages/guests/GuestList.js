@@ -111,6 +111,41 @@ class GuestList extends Component {
                                     }
                                 }
                             }
+                        },
+                        {
+                            name: "is_invitation_sent",
+                            label: "Pozvánka poslána",
+                            options: {
+                                filter: false,
+                                sort: false,
+                                customBodyRender: value => {
+                                    if(value !== null) {
+                                        if(value === true) {
+                                            return <span>Ano</span>
+                                        } else {
+                                            return <span>Ne</span>
+                                        }
+                                    } else {
+                                        return <span></span>
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            name: "escort_name",
+                            label: "Eskort",
+                            options: {
+                                filter: false,
+                                sort: false
+                            }
+                        },
+                        {
+                            name: "type",
+                            label: "Typ",
+                            options: {
+                                filter: false,
+                                sort: false
+                            }
                         }
                     ]}
                     options={{

@@ -127,7 +127,7 @@ class EditGuest extends Component {
     handleSubmit = () => {
         this.props.dispatch(editGuest(
             this.state.id,
-            removeEmpty({
+            Object.assign(removeEmpty({
                 first_name: this.state.first_name,
                 last_name: this.state.last_name,
                 middle_name: this.state.middle_name,
@@ -147,9 +147,8 @@ class EditGuest extends Component {
                 is_wine_drinker: this.state.is_wine_drinker,
                 type: this.state.type,
                 is_invitation_sent: this.state.is_invitation_sent,
-                invitation_delivery_type: this.state.invitation_delivery_type,
-                escort_id: this.state.escort_id
-            })
+                invitation_delivery_type: this.state.invitation_delivery_type
+            }), {escort_id: this.state.escort_id})
         ));
     };
 
@@ -237,7 +236,11 @@ class EditGuest extends Component {
             }
         ];
 
-        const escortOptions = this.props.guests.data.map(
+        const escortOptions = [{
+            id: 0,
+            value: null,
+            label: "-----"
+        }].concat(this.props.guests.data.map(
             item => (
                 {
                     id: item.id,
@@ -245,7 +248,7 @@ class EditGuest extends Component {
                     label: item.first_name + " " + item.last_name + ", " + item.city
                 }
             )
-        );
+        ));
 
         const languageOptions = [
             {

@@ -128,13 +128,9 @@ class RoomDetail extends Component {
                                         this.props.dispatch(push("/guests/" + rowData[0]))
                                     },
                                     onRowsDelete: (rows) => {
-                                        console.log(rows);
                                         let lookup = rows.lookup;
                                         let deletedData = Object.keys(lookup);
                                         let dataIndexes = deletedData.map(x => parseInt(x));
-                                        console.log("Lookup:", lookup);
-                                        console.log("Deleted data:", deletedData);
-                                        console.log("Data indexes:", dataIndexes);
                                         dataIndexes.forEach(index => {
                                             let guest = this.state.allocated_guests[index];
                                             this.props.dispatch(assignRoomToGuest(guest.id, null));

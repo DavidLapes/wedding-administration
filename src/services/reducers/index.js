@@ -9,7 +9,15 @@ import {createGuestReducer} from "./guests/createGuest";
 import {fetchGuestDetailReducer} from "./guests/fetchGuestDetail";
 import {fetchGuestsReducer} from "./guests/fetchGuests";
 import {editGuestReducer} from "./guests/editGuest";
+import {assignRoomToGuestReducer} from "./guests/assignRoomToGuest";
 import {deleteGuestReducer} from "./guests/deleteGuest";
+
+import {createRoomReducer} from "./rooms/createRoom";
+import {fetchRoomDetailReducer} from "./rooms/fetchRoomDetail";
+import {fetchRoomsReducer} from "./rooms/fetchRooms";
+import {editRoomReducer} from "./rooms/editRoom";
+import {deleteRoomReducer} from "./rooms/deleteRoom";
+import {fetchAvailableRoomsReducer} from "./rooms/fetchAvailableRooms";
 
 import {createTableReducer} from "./tables/createTable";
 import {fetchTableDetailReducer} from "./tables/fetchTableDetail";
@@ -23,6 +31,8 @@ import {fetchStatisticsAccommodationAcceptedReducer} from "./statistics/fetchSta
 import {fetchStatisticsAccommodationDeclinedReducer} from "./statistics/fetchStatisticsAccommodationDeclined";
 import {fetchStatisticsBeerDrinkersReducer} from "./statistics/fetchStatisticsBeerDrinkers";
 import {fetchStatisticsWineDrinkersReducer} from "./statistics/fetchStatisticsWineDrinkers";
+import {fetchStatisticsGuestsWithRoomReducer} from "./statistics/fetchStatisticsGuestsWithRoom";
+import {fetchStatisticsGuestsWithoutRoomReducer} from "./statistics/fetchStatisticsGuestsWithoutRoom";
 
 const reducers = (history) => combineReducers({
     auth: authenticationReducer,
@@ -32,8 +42,16 @@ const reducers = (history) => combineReducers({
     createGuest: createGuestReducer,
     fetchGuestsDetails: fetchGuestDetailReducer,
     fetchGuests: fetchGuestsReducer,
+    assignRoomToGuest: assignRoomToGuestReducer,
     editGuest: editGuestReducer,
     deleteGuest: deleteGuestReducer,
+
+    createRoom: createRoomReducer,
+    fetchRoomsDetails: fetchRoomDetailReducer,
+    fetchRooms: fetchRoomsReducer,
+    fetchAvailableRooms: fetchAvailableRoomsReducer,
+    editRoom: editRoomReducer,
+    deleteRoom: deleteRoomReducer,
 
     createTable: createTableReducer,
     fetchTablesDetails: fetchTableDetailReducer,
@@ -47,6 +65,8 @@ const reducers = (history) => combineReducers({
     fetchStatisticsAccommodationDeclined: fetchStatisticsAccommodationDeclinedReducer,
     fetchStatisticsBeerDrinkers: fetchStatisticsBeerDrinkersReducer,
     fetchStatisticsWineDrinkers: fetchStatisticsWineDrinkersReducer,
+    fetchStatisticsGuestsWithRoom: fetchStatisticsGuestsWithRoomReducer,
+    fetchStatisticsGuestsWithoutRoom: fetchStatisticsGuestsWithoutRoomReducer,
 
     router: connectRouter(history)
 })

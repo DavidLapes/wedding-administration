@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {fetchGuestDetail} from "../../../services/actions/guests/fetchGuestDetail";
+import {fetchRoomDetail} from "../../../services/actions/rooms/fetchRoomDetail";
 import {push} from "connected-react-router";
 
 class GuestDetail extends Component {
@@ -20,6 +21,8 @@ class GuestDetail extends Component {
         note: null,
         language: null,
         accommodation: null,
+        room_id: null,
+        room_number: null,
         rsvp_answered: null,
         email_sent: null,
         is_invitation_sent: null,
@@ -181,6 +184,17 @@ class GuestDetail extends Component {
                     </div>
                     <div className="detail-row">
                         <div className="detail-row-title">
+                            <span>Číslo pokoje</span>
+                        </div>
+                        <div className="detail-row-value" onClick={() => {
+                            this.props.dispatch(fetchRoomDetail(this.state.room_id));
+                            this.props.dispatch(push("/rooms/" + this.state.room_id));
+                        }}>
+                            <span>{this.state.room_number}</span>
+                        </div>
+                    </div>
+                    <div className="detail-row">
+                        <div className="detail-row-title">
                             <span>Jí maso</span>
                         </div>
                         <div className="detail-row-value">
@@ -263,6 +277,14 @@ class GuestDetail extends Component {
                             onClick={() => this.props.dispatch(push("/guests/" + this.state.id + "/edit"))}
                         >
                             Editovat
+                        </button>
+                    </div>
+                    <div className="detail-row">
+                        <button
+                            className="form-submit-button"
+                            onClick={() => this.props.dispatch(push("/guests/" + this.state.id + "/assign-room"))}
+                        >
+                            Ubytovat
                         </button>
                     </div>
                 </div>

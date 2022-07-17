@@ -12,7 +12,9 @@ class Statistics extends Component {
             accommodation_accepted_count: 0,
             accommodation_declined_count: 0,
             beer_drinkers_count:          0,
-            wine_drinkers_count:          0
+            wine_drinkers_count:          0,
+            guests_with_room_count:       0,
+            guests_without_room_count:    0,
         }
     }
 
@@ -64,6 +66,16 @@ class Statistics extends Component {
                     <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/wine-drinkers"))}>
                         <span className="grid-column-label">Vinaři</span>
                         <span className="grid-column-value">{this.state.statistics.wine_drinkers_count}</span>
+                    </div>
+                </div>
+                <div className="grid-container">
+                    <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/guests-with-room"))}>
+                        <span className="grid-column-label">Ubytovaní hosté</span>
+                        <span className="grid-column-value">{this.state.statistics.guests_with_room_count}</span>
+                    </div>
+                    <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/guests-without-room"))}>
+                        <span className="grid-column-label">Hosté čekající na pokoj</span>
+                        <span className="grid-column-value">{this.state.statistics.guests_without_room_count}</span>
                     </div>
                 </div>
             </div>

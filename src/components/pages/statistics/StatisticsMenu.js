@@ -27,6 +27,12 @@ class StatisticsMenu extends Component {
                     <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/wine-drinkers"))}>
                         <span className="grid-column-label">Vinaři</span>
                     </div>
+                    <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/guests-with-room"))}>
+                        <span className="grid-column-label">Ubytovaní hosté</span>
+                    </div>
+                    <div className="grid-column" onClick={() => this.props.dispatch(push("/statistics/guests-without-room"))}>
+                        <span className="grid-column-label">Hosté čekající na pokoj</span>
+                    </div>
                 </div>
             </div>
         )

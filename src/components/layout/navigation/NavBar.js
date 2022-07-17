@@ -38,6 +38,12 @@ class NavBar extends Component {
                                 <li>
                                     <Link to="/statistics/wine-drinkers">Vinaři</Link>
                                 </li>
+                                <li>
+                                    <Link to="/statistics/guests-with-room">Ubytovaní hosté</Link>
+                                </li>
+                                <li>
+                                    <Link to="/statistics/guests-without-room">Hosté čekající na pokoj</Link>
+                                </li>
                             </ul>
                         </li>
                         <li>
@@ -51,6 +57,17 @@ class NavBar extends Component {
                                 </li>
                                 <li>
                                     <Link to="/guests">Zobrazit hosty</Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <Link to="/rooms">Pokoje</Link>
+                            <ul className="nav-link-dropdown">
+                                <li>
+                                    <Link to="/create-room">Přidat pokoj</Link>
+                                </li>
+                                <li>
+                                    <Link to="/rooms">Zobrazit pokoje</Link>
                                 </li>
                             </ul>
                         </li>
